@@ -1,6 +1,6 @@
 # openpay_plugin_sdk
 
-Openpay sdk get devicesessionid
+Flutter package to implement Openpay sdk: get devicesessionid
 
 ## Android
 
