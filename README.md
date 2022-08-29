@@ -9,6 +9,8 @@ android/build.gradle
 
 this:
 
+```Xml
+
 android {
     compileSdkVersion 31
     ...
@@ -24,6 +26,8 @@ android {
         exclude 'META-INF/ASL2.0'
     }
 }
+
+```
 
 add in file:
 android/app/src/main/AndroidManifest.xml
