@@ -24,13 +24,16 @@ android {
     }
 }
 
-add: example/android/app/src/main/AndroidManifest.xml
+add example/android/app/src/main/AndroidManifest.xml
+
+this:
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="...">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" ></uses-permission>
-     <activity ...
-
+     <activity ...>
+     ...
+     </<activity>
 ## IOS
 
 ## Implement
