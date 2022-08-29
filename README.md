@@ -4,7 +4,8 @@ Openpay sdk get devicesessionid
 
 ## Android
 
-Add in android/build.gradle
+Add in file:
+android/build.gradle
 
 this:
 
@@ -24,7 +25,8 @@ android {
     }
 }
 
-add example/android/app/src/main/AndroidManifest.xml
+add in file:
+android/app/src/main/AndroidManifest.xml
 
 this:
 
