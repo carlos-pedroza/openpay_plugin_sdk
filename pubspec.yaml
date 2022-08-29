@@ -1,6 +1,7 @@
 name: openpay_plugin_sdk
 description: Openpay sdk 
 version: 0.0.1
+author: Carlos Pedroza
 homepage:
 
 environment:
