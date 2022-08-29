@@ -27,6 +27,8 @@ android {
 add example/android/app/src/main/AndroidManifest.xml
 
 this:
+
+```Xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="...">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
@@ -34,6 +36,9 @@ this:
      <activity ...>
      ...
      </<activity>
+</manifest>
+```
+
 ## IOS
 
 ## Implement
