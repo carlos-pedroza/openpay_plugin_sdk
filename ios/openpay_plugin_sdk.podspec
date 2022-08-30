@@ -14,14 +14,20 @@ A new Flutter plugin project.
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
+  public_header_files='Classes/**/*.h'
   s.dependency 'Flutter'
-  s.platform = :ios, '9.0'
+  s.platform = :ios, '14.3'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
-
   s.preserve_paths = 'OpenpayKit.xcframework/**/*'
-  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework OpenpayKit' }
-  s.vendored_frameworks = 'OpenpayKit.xcframework'
+  # s.vendored_frameworks = 'OpenpayKit.xcframework/ios-arm64_x86_64-simulator/OpenpayKit.framework'
+  # s.vendored_frameworks = 'OpenpayKit.xcframework/ios-arm64/OpenpayKit.framework'
+  s.vendored_frameworks ='OpenpayKit.xcframework'
+  
+  s.xcconfig = {
+    'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/../OpenpayKit.xcframework" "${PODS_ROOT}/../.symlinks/flutter/ios-release" "${PODS_CONFIGURATION_BUILD_DIR}"',
+    'OTHER_LDFLAGS' => '${inherited} -framework OpenpayKit ${PODS_LIBRARIES}'
+  }
 end
