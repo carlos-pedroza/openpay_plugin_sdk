@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     String deviceSessionId;
     String merchantId = 'm...';
-    String publicKey = 'pk_...';
+    String publicKey = 'pk_...'; 
     // Platform messages may fail, so w e use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
