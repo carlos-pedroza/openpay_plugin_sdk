@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
     String deviceSessionId;
     String merchantId = 'm...';
     String publicKey = 'pk_...';
-    // Platform messages may fail, so we use a try/catch PlatformException.
+    // Platform messages may fail, so w e use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
       platformVersion = await _openpayPluginSdkPlugin.getPlatformVersion() ?? 'Unknown platform version';
