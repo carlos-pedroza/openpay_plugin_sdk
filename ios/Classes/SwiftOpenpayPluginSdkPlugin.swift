@@ -3,6 +3,8 @@ import UIKit
 import OpenpayKit
 
 public class SwiftOpenpayPluginSdkPlugin: NSObject, FlutterPlugin {
+  var openpay : Openpay!
+
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "openpay_plugin_sdk", binaryMessenger: registrar.messenger())
     let instance = SwiftOpenpayPluginSdkPlugin()
@@ -18,7 +20,6 @@ public class SwiftOpenpayPluginSdkPlugin: NSObject, FlutterPlugin {
       let merchantId = args["merchantId"] as! String
       let publicKey = args["publicKey"] as! String
       let isProductionMode = args["isProductionMode"] as! Bool
-      var openpay : Openpay!
       openpay = Openpay(withMerchantId: merchantId, andApiKey: publicKey, isProductionMode: isProductionMode, isDebug: false)
       openpay.createDeviceSessionId(successFunction: successSessionID, failureFunction: failSessionID)
       default:
