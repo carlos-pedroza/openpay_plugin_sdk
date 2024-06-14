@@ -1,7 +1,7 @@
 name: openpay_plugin_sdk
 description: Openpay sdk 
 version: 0.0.1
-homepage:
+homepage: ed
 
 environment:
   sdk: ">=2.17.6 <3.0.0"

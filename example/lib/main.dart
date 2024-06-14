@@ -31,12 +31,15 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     String deviceSessionId;
     String merchantId = 'm...';
-    String publicKey = 'pk_...'; 
+    String publicKey = 'pk_...';
     // Platform messages may fail, so w e use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
-      platformVersion = await _openpayPluginSdkPlugin.getPlatformVersion() ?? 'Unknown platform version';
-      deviceSessionId = await _openpayPluginSdkPlugin.createDeviceSessionId(merchantId, publicKey, false) ?? '-';
+      platformVersion = await _openpayPluginSdkPlugin.getPlatformVersion() ??
+          'Unknown platform version';
+      deviceSessionId = await _openpayPluginSdkPlugin.createDeviceSessionId(
+              merchantId, publicKey, false) ??
+          '-';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
       deviceSessionId = '';
@@ -58,6 +61,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: const Text('Plugin example app'),
         ),
         body: Center(

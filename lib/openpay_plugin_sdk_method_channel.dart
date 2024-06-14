@@ -11,13 +11,20 @@ class MethodChannelOpenpayPluginSdk extends OpenpayPluginSdkPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version =
+        await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
 
-    @override
-  Future<String?> createDeviceSessionId(String merchantId, String publicKey, bool isProductionMode) async {
-    final deviceSessionId = await methodChannel.invokeMethod<String>('createDeviceSessionId', {'merchantId': merchantId, 'publicKey': publicKey, 'isProductionMode': isProductionMode});
+  @override
+  Future<String?> createDeviceSessionId(
+      String merchantId, String publicKey, bool isProductionMode) async {
+    final deviceSessionId =
+        await methodChannel.invokeMethod<String>('createDeviceSessionId', {
+      'merchantId': merchantId,
+      'publicKey': publicKey,
+      'isProductionMode': isProductionMode,
+    });
     return deviceSessionId;
   }
 }

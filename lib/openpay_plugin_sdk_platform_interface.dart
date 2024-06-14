@@ -14,7 +14,7 @@ abstract class OpenpayPluginSdkPlatform extends PlatformInterface {
   ///
   /// Defaults to [MethodChannelOpenpayPluginSdk].
   static OpenpayPluginSdkPlatform get instance => _instance;
-  
+
   /// Platform-specific implementations should set this with their own
   /// platform-specific class that extends [OpenpayPluginSdkPlatform] when
   /// they register themselves.
@@ -23,12 +23,8 @@ abstract class OpenpayPluginSdkPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
-  }
+  Future<String?> getPlatformVersion();
 
-  Future<String?> createDeviceSessionId(String merchantId, String publicKey, bool isProductionMode) {
-    throw UnimplementedError('platformVersion() has not been implemented.');
-  }
-  
+  Future<String?> createDeviceSessionId(
+      String merchantId, String publicKey, bool isProductionMode);
 }
